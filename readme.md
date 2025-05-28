@@ -15,6 +15,7 @@ I created this tool to quickly commit and push my DSA solutions as I solve them.
 * 📁 Create folders and files with built-in code templates
 * 🔄 Add, commit, and push to Git in a few steps
 * 📂 View directory contents in a clean layout
+* 🎨 Rich and colorful terminal interface using [`rich`](https://github.com/Textualize/rich)
 
 ---
 
@@ -29,11 +30,21 @@ cd dsa-commiter
 chmod +x install.sh
 ./install.sh
 ```
+
+Or install manually:
+
+```bash
+pip3 install -r requirements.txt
+pip3 install -e .
+```
+
 ---
 
 ## 💻 Usage
 
-Just run:
+Navigate to the local repository or project folder. Make sure it's already initialized with Git and connected to a remote repository.
+
+Then run:
 
 ```bash
 dsa-commiter
@@ -69,17 +80,6 @@ dsa-commiter/
 * Python 3.7+
 * Git
 * pip3
-
----
-
-## 🛠️ Development
-
-```bash
-git clone https://github.com/yourusername/dsa-commiter.git
-cd dsa-commiter
-pip3 install -e .
-dsa-commiter
-```
 
 ---
 
