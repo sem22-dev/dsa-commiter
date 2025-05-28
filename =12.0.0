@@ -1,0 +1,18 @@
+Collecting rich
+  Downloading rich-14.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting markdown-it-py>=2.2.0 (from rich)
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich)
+  Downloading pygments-2.19.1-py3-none-any.whl.metadata (2.5 kB)
+Collecting typing-extensions<5.0,>=4.0.0 (from rich)
+  Downloading typing_extensions-4.13.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading rich-14.0.0-py3-none-any.whl (243 kB)
+Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+Downloading pygments-2.19.1-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 2.5 MB/s eta 0:00:00
+Downloading typing_extensions-4.13.2-py3-none-any.whl (45 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: typing-extensions, pygments, mdurl, markdown-it-py, rich
+Successfully installed markdown-it-py-3.0.0 mdurl-0.1.2 pygments-2.19.1 rich-14.0.0 typing-extensions-4.13.2
