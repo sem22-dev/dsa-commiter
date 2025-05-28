@@ -31,13 +31,6 @@ chmod +x install.sh
 ./install.sh
 ```
 
-Or install manually:
-
-```bash
-pip3 install -r requirements.txt
-pip3 install -e .
-```
-
 ---
 
 ## 💻 Usage
