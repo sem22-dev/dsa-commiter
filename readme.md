@@ -40,7 +40,7 @@ chmod +x install.sh
 
 ## 💻 Usage
 
-Navigate to a project directory linked with a remote repository (e.g., [https://github.com/sem22-dev/dsa-neetcode-150.git](https://github.com/sem22-dev/dsa-neetcode-150.git)). Then run:
+Navigate to a project directory linked with a remote repository. Then run:
 
 ```bash
 dsa-commiter
