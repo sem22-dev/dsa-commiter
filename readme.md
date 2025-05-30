@@ -13,6 +13,9 @@ I created this tool to quickly commit and push my DSA solutions as I solve them.
 ## ✨ Features
 
 * 📁 Create folders and files with built-in code templates
+* 🗂️ Create nested directories (folders inside folders)
+* 🎯 Choose a specific directory to create files or subfolders
+* 🚀 Choose and push a specific directory to Git
 * 🔄 Add, commit, and push to Git in a few steps
 * 📂 View directory contents in a clean layout
 * 🎨 Rich and colorful terminal interface using [`rich`](https://github.com/Textualize/rich)
@@ -35,9 +38,7 @@ chmod +x install.sh
 
 ## 💻 Usage
 
-Navigate to the local repository or project folder. Make sure it's already initialized with Git and connected to a remote repository.
-
-Then run:
+Navigate to the local repository or project folder. Make sure it's already initialized with Git and connected to a remote repository. Then run:
 
 ```bash
 dsa-commiter
@@ -45,10 +46,11 @@ dsa-commiter
 
 From there, follow the interactive prompts to:
 
-1. 📂 Create directories and files
-2. 🔄 Add, commit, and push your changes
-3. 📃 List directory contents
-4. ❌ Exit the tool
+1. 📂 Create directories and files (including inside nested folders)
+2. 🎯 Choose a target directory for your work
+3. 🔄 Add, commit, and push changes (option to push specific directories)
+4. 📃 List and browse directory contents
+5. ❌ Exit the tool
 
 ---
 
