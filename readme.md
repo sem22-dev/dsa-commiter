@@ -6,7 +6,14 @@ A lightweight command-line tool to create directories and files for your DSA (Da
 
 ## 📌 Why I Built This
 
-I created this CLI to streamline committing and pushing my LeetCode solutions, helping me stay organized and consistent with my DSA practice.
+I’ve been grinding LeetCode following NeetCode’s roadmap — and while solving problems regularly helped, I realized I had no proper system to track my progress.
+
+I wanted something simple that could:
+✅ Create folders and files for each solution
+✅ Let me write the solution code directly in the terminal
+✅ Automatically commit and push it to GitHub
+
+So I built DSA Commiter CLI 🚀 — a lightweight command-line tool that does all this in seconds.
 
 ---
 
