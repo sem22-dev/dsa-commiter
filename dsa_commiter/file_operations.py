@@ -23,15 +23,15 @@ class FileOperations:
             'txt': 'Hello World!'
         }
 
-    def create_directory_and_file(self, dir_name, filename, content=None):
-        """Create a directory (if specified) and a file with given or default content."""
-        dir_path = os.path.join(self.current_dir, dir_name) if dir_name else self.current_dir
+    def create_directory_and_file(self, dir_path, filename, content=None):
+        """Create a directory path (if specified) and a file with given or default content."""
+        dir_full_path = os.path.join(self.current_dir, dir_path) if dir_path else self.current_dir
         
         # Validate filename
         if not filename:
             console.print("[red]❌ File name cannot be empty[/red]")
             return False
-        invalid_chars = '<>:"/\\|?*'
+        invalid_chars = '<>:"\\|?*'
         if any(char in filename for char in invalid_chars):
             console.print(f"[red]❌ Invalid characters in filename: {invalid_chars}[/red]")
             return False
@@ -39,11 +39,11 @@ class FileOperations:
             console.print("[red]❌ Filename too long (max 255 characters)[/red]")
             return False
         
-        # Create directory if specified
-        if dir_name:
+        # Create directory path if specified
+        if dir_path:
             try:
-                os.makedirs(dir_path, exist_ok=True)
-                console.print(f"[green]✅ Created directory: {dir_path}[/green]")
+                os.makedirs(dir_full_path, exist_ok=True)
+                console.print(f"[green]✅ Created or using directory: {dir_full_path}[/green]")
             except Exception as e:
                 console.print(f"[red]❌ Error creating directory: {e}[/red]")
                 return False
@@ -52,7 +52,7 @@ class FileOperations:
         extension = filename.split('.')[-1].lower() if '.' in filename else ''
         default_content = self.default_contents.get(extension, "Hello World!")
         file_content = content or default_content
-        file_path = os.path.join(dir_path, filename)
+        file_path = os.path.join(dir_full_path, filename)
         
         try:
             with open(file_path, 'w', encoding='utf-8') as file:
