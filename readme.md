@@ -1,35 +1,37 @@
 # DSA Commiter CLI 🚀
 
-A simple and handy command-line tool to manage and push your DSA (Data Structures & Algorithms) solutions to GitHub — perfect for tracking your LeetCode progress.
+A lightweight command-line tool to create directories and files for your DSA (Data Structures & Algorithms) solutions and automatically commit and push them to GitHub. Perfect for tracking LeetCode progress.
 
 ---
 
 ## 📌 Why I Built This
 
-I created this tool to quickly commit and push my DSA solutions as I solve them. It helps me keep track of my [LeetCode](https://leetcode.com/) progress and stay consistent with my learning.
+I created this CLI to streamline committing and pushing my LeetCode solutions, helping me stay organized and consistent with my DSA practice.
 
 ---
 
 ## ✨ Features
 
-* 📁 Create folders and files with built-in code templates
-* 🗂️ Create nested directories (folders inside folders)
-* 🎯 Choose a specific directory to create files or subfolders
-* 🚀 Choose and push a specific directory to Git
-* 🔄 Add, commit, and push to Git in a few steps
-* 📂 View directory contents in a clean layout
-* 🎨 Rich and colorful terminal interface using [`rich`](https://github.com/Textualize/rich)
+* 📁 Create directories and files with default code templates (e.g., .py, .js, .cpp)
+* ✍️ Add multiline content (e.g., LeetCode solutions) with Ctrl+D or two blank lines to finish
+* 🔄 Automatically git add, commit, and push to your current branch (main or master)
+* 🎨 Clean, colorful terminal interface using [rich](https://github.com/Textualize/rich)
+* 🛡️ Robust error handling for file creation and Git operations
 
 ---
 
 ## 🚀 Quick Start
 
-```bash
-# Clone the repo
-git clone https://github.com/yourusername/dsa-commiter.git
-cd dsa-commiter
+Clone the repository:
 
-# Run the installation script
+```bash
+git clone https://github.com/sem22-dev/dsa-commiter.git
+cd dsa-commiter
+```
+
+Run the installation script:
+
+```bash
 chmod +x install.sh
 ./install.sh
 ```
@@ -38,19 +40,42 @@ chmod +x install.sh
 
 ## 💻 Usage
 
-Navigate to the local repository or project folder. Make sure it's already initialized with Git and connected to a remote repository. Then run:
+Navigate to a project directory linked with a remote repository (e.g., [https://github.com/sem22-dev/dsa-neetcode-150.git](https://github.com/sem22-dev/dsa-neetcode-150.git)). Then run:
 
 ```bash
 dsa-commiter
 ```
 
-From there, follow the interactive prompts to:
+Follow the prompts to:
 
-1. 📂 Create directories and files (including inside nested folders)
-2. 🎯 Choose a target directory for your work
-3. 🔄 Add, commit, and push changes (option to push specific directories)
-4. 📃 List and browse directory contents
-5. ❌ Exit the tool
+* 📂 Enter a directory name (or press Enter for current directory)
+* 📄 Enter a file name (e.g., solution.py)
+* ✍️ Enter file content (e.g., a LeetCode solution), ending with Ctrl+D or two blank lines
+* 🔄 The CLI auto-commits and pushes to your current branch
+
+Example:
+
+```
+📁 Enter directory name (or press Enter): problems
+📝 Supported file extensions: .py, .js, .cpp, .java, .c, .txt
+📄 Enter file name (e.g., solution.py): solution.py
+📝 Enter file content (Ctrl+D or two blank lines to end):
+def twoSum(nums, target):
+    seen = {}
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in seen:
+            return [seen[complement], i]
+        seen[num] = i
+    return []
+[Ctrl+D]
+
+📅 Created directory: /path/to/problems
+📅 Created file: /path/to/problems/solution.py
+🔢 Added file: problems/solution.py
+📅 Committed with message: 'problems/solution.py solution'
+📡 Pushed file: problems/solution.py to branch 'master'
+```
 
 ---
 
@@ -59,28 +84,28 @@ From there, follow the interactive prompts to:
 ```
 dsa-commiter/
 ├── dsa_commiter/
+│   ├── __init__.py
 │   ├── cli_interface.py
 │   ├── file_operations.py
-│   └── git_operations.py
+│   ├── git_operations.py
 ├── install.sh
-├── requirements.txt
 ├── setup.py
-└── README.md
+├── README.md
 ```
 
 ---
 
-## 📆 Requirements
+## 📜 Requirements
 
 * Python 3.7+
 * Git
-* pip3
+* rich library (installed via install.sh)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+MIT License
 
 ---
 

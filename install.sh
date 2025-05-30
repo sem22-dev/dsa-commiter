@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # DSA Commiter Installation Script
@@ -62,18 +61,28 @@ else
 fi
 
 # Create virtual environment (optional but recommended)
-print_status "Setting up installation..."
+print_status "Creating virtual environment..."
+if [ -d "venv" ]; then
+    print_warning "Virtual environment already exists. Using existing venv."
+else
+    python3 -m venv venv
+    print_success "Virtual environment created"
+fi
 
-# Install the package
-print_status "Installing dsa-commiter..."
+# Activate virtual environment
+source venv/bin/activate
+print_success "Virtual environment activated"
 
-# Install dependencies first
+# Install dependencies
+print_status "Installing dependencies..."
 pip3 install rich>=12.0.0
+print_success "Dependencies installed"
 
-# Install the package in development mode if setup.py exists
+# Install the package in development mode
+print_status "Installing dsa-commiter..."
 if [ -f "setup.py" ]; then
-    print_status "Installing from source..."
     pip3 install -e .
+    print_success "dsa-commiter installed in editable mode"
 else
     print_error "setup.py not found. Make sure you're in the correct directory."
     exit 1
@@ -87,21 +96,20 @@ if command -v dsa-commiter &> /dev/null; then
     echo "🎉 Installation Complete!"
     echo "========================"
     echo ""
-    echo "You can now use 'dsa-commiter' command from anywhere in your terminal."
+    echo "You can now use 'dsa-commiter' command from within the virtual environment."
+    echo "Activate the virtual environment with: source venv/bin/activate"
     echo ""
     echo "Usage:"
-    echo "  dsa-commiter    - Start the interactive CLI"
-    echo ""
-    echo "Example:"
+    echo "  source venv/bin/activate"
     echo "  cd your-project-directory"
     echo "  dsa-commiter"
     echo ""
 else
     print_warning "Installation completed but 'dsa-commiter' command not found in PATH."
     echo "You may need to:"
-    echo "1. Restart your terminal"
-    echo "2. Add pip's bin directory to your PATH"
-    echo "3. Or run: python3 -m dsa_commiter.cli_interface"
+    echo "1. Activate the virtual environment: source venv/bin/activate"
+    echo "2. Run: python3 -m dsa_commiter.cli_interface"
+    echo "3. Ensure pip's bin directory is in your PATH"
 fi
 
 print_status "Installation script completed!"

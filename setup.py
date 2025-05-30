@@ -16,7 +16,7 @@ setup(
     description="A CLI tool for managing DSA files and Git operations",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/dsa-commiter",
+    url="https://github.com/sem22-dev/dsa-commiter",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
