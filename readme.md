@@ -29,12 +29,28 @@ git clone https://github.com/sem22-dev/dsa-commiter.git
 cd dsa-commiter
 ```
 
+---
+
+## 💻 Installation
+
+### 🌐 macOS / Linux
+
 Run the installation script:
 
 ```bash
 chmod +x install.sh
 ./install.sh
 ```
+
+### 📺 Windows
+
+Run the batch installer:
+
+```cmd
+install.bat
+```
+
+Make sure you have **Python**, **pip**, and **Git** in your system PATH.
 
 ---
 
@@ -74,7 +90,16 @@ def twoSum(nums, target):
 📅 Created file: /path/to/problems/solution.py
 🔢 Added file: problems/solution.py
 📅 Committed with message: 'problems/solution.py solution'
-📡 Pushed file: problems/solution.py to branch 'master'
+🛁 Pushed file: problems/solution.py to branch 'master'
+```
+
+---
+
+If `dsa-commiter` is not recognized, use:
+
+```cmd
+venv\Scripts\activate
+python -m dsa_commiter.cli_interface
 ```
 
 ---
@@ -89,6 +114,7 @@ dsa-commiter/
 │   ├── file_operations.py
 │   ├── git_operations.py
 ├── install.sh
+├── install.bat
 ├── setup.py
 ├── README.md
 ```
@@ -99,7 +125,7 @@ dsa-commiter/
 
 * Python 3.7+
 * Git
-* rich library (installed via install.sh)
+* `rich` library (installed via script)
 
 ---
 
