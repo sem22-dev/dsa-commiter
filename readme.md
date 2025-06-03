@@ -1,4 +1,4 @@
-# DSA Commiter CLI 🚀
+# DSA Commiter CLI 
 
 A lightweight command-line tool to create directories and files for your DSA (Data Structures & Algorithms) solutions and automatically commit and push them to GitHub. Perfect for tracking LeetCode progress.
 
@@ -9,15 +9,15 @@ A lightweight command-line tool to create directories and files for your DSA (Da
 I’ve been grinding LeetCode following NeetCode’s roadmap — and while solving problems regularly helped, I realized I had no proper system to track my progress.
 
 I wanted something simple that could:
-✅ Create folders and files for each solution
-✅ Let me write the solution code directly in the terminal
-✅ Automatically commit and push it to GitHub
+* Create folders and files for each solution
+* Let me write the solution code directly in the terminal
+* Automatically commit and push it to GitHub
 
-So I built DSA Commiter CLI 🚀 — a lightweight command-line tool that does all this in seconds.
+So I built DSA Commiter CLI — a lightweight command-line tool that does all this in seconds.
 
 ---
 
-## ✨ Features
+## Features
 
 * 📁 Create directories and files with default code templates (e.g., .py, .js, .cpp)
 * ✍️ Add multiline content (e.g., LeetCode solutions) with Ctrl+D or two blank lines to finish
@@ -27,7 +27,7 @@ So I built DSA Commiter CLI 🚀 — a lightweight command-line tool that does a
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 Clone the repository:
 
